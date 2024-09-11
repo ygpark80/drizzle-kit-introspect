@@ -1,0 +1,11 @@
+{
+  "name": "drizzle-kit-introspect",
+  "scripts": {
+    "pull": "drizzle-kit introspect"
+  },
+  "dependencies": {
+    "drizzle-kit": "^0.24.2",
+    "drizzle-orm": "^0.33.0",
+    "mysql2": "^3.11.2"
+  }
+}
