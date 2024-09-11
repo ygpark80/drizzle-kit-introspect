@@ -1,22 +1,13 @@
-import { mysqlTable, mysqlSchema, AnyMySqlColumn, primaryKey, int, mysqlEnum, decimal } from "drizzle-orm/mysql-core"
+import { mysqlTable, mysqlSchema, AnyMySqlColumn, primaryKey, int, decimal } from "drizzle-orm/mysql-core"
 import { sql } from "drizzle-orm"
 
-export const discountTypes = mysqlTable("discount_types", {
-	id: int("id").notNull(),
-	type: mysqlEnum("type", ['defaultDiscount','coupon','priority']),
-},
-(table) => {
-	return {
-		discountTypesId: primaryKey({ columns: [table.id], name: "discount_types_id"}),
-	}
-});
-
-export const mediaResult = mysqlTable("media_result", {
+export const sample = mysqlTable("sample", {
 	id: int("id").autoincrement().notNull(),
+	width: smallint("width", { unsigned: true }),
 	duration: decimal("duration", { precision: 10, scale: 5) unsigne }),
 },
 (table) => {
 	return {
-		mediaResultId: primaryKey({ columns: [table.id], name: "media_result_id"}),
+		sampleId: primaryKey({ columns: [table.id], name: "sample_id"}),
 	}
 });
